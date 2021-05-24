@@ -27,6 +27,7 @@ export default function Home({allPostsData}) {
                         </li>
                     ))}
                 </ul>
+                <Link href={`/fear_greed`}><a>Crypto Fear & Greed Index</a></Link>
             </section>
         </Layout>
     )
