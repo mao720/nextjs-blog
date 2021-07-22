@@ -3,14 +3,14 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = 'MMM'
+const name = 'Mao720'
 export const siteTitle = 'Next.js Sample Website'
 
-export default function Layout({children, home}) {
+export default function Layout({ children, home }) {
     return (
         <div className={styles.container}>
             <Head>
-                <link rel="icon" href="/images/profile.jpg"/>
+                <link rel="icon" href="/images/profile.jpg" />
                 <meta
                     name="description"
                     content="Learn how to build a personal website using Next.js"
@@ -21,22 +21,26 @@ export default function Layout({children, home}) {
                         siteTitle
                     )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
                 />
-                <meta name="og:title" content={siteTitle}/>
-                <meta name="twitter:card" content="summary_large_image"/>
+                <meta name="og:title" content={siteTitle} />
+                <meta name="twitter:card" content="summary_large_image" />
             </Head>
             <header className={styles.header}>
                 {home ? (
                     <>
-                        <img
-                            src="/images/profile.jpg"
-                            className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-                            alt={name}
-                        />
+                        <Link href='https://github.com/mao720'>
+                            <a>
+                                <img
+                                    src="/images/profile.jpg"
+                                    className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+                                    alt={name}
+                                />
+                            </a>
+                        </Link>
                         <h1 className={utilStyles.heading2Xl}>{name}</h1>
                     </>
                 ) : (
                     <>
-                        <Link href="/">
+                        <Link href="https://github.com/mao720">
                             <a>
                                 <img
                                     src="/images/profile.jpg"
@@ -46,7 +50,7 @@ export default function Layout({children, home}) {
                             </a>
                         </Link>
                         <h2 className={utilStyles.headingLg}>
-                            <Link href="/">
+                            <Link href="https://github.com/mao720">
                                 <a className={utilStyles.colorInherit}>{name}</a>
                             </Link>
                         </h2>
